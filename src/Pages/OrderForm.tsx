@@ -41,9 +41,6 @@ const OrderForm = ({ orderPlaced, close, props }: any) => {
     // Handle form submission
     const onSubmit = async (data: FormData) => {
         setError(null);
-        await AsyncStorage.setItem("name", data?.name);
-        await AsyncStorage.setItem("email", data?.email);
-        await AsyncStorage.setItem("phone", data?.phone);
         let options: any = {
             description: 'Credits towards consultation',
             image: props?.image, //require('../../images.png')
